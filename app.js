@@ -66,8 +66,8 @@ copyBtn.addEventListener("click", async () => {
 
 const strengthMeter = (password) => {
     let points = 0;
-    if (password.length >= 12) {
-        points += 3;
+    if (password.length >= 10) {
+        points += 4;
     }
     if (uppercase.checked) {
         points += 2;
@@ -78,19 +78,19 @@ const strengthMeter = (password) => {
     }
 
     if (numbers.checked) {
-        points += 2;
+        points += 1;
     }
 
     if (symbols.checked) {
         points += 2;
     }
     let percentageWidht = (points / 10) * 100;
-    if (points < 5) {
+    if (points <= 5) {
         strengthBar.style.width = percentageWidht + "%"
         strengthBar.style.backgroundColor = "red"
         strengthText.innerHTML = "Weak"
     }
-    if (points >= 5 && points <= 7) {
+    if (points >= 6 && points < 8) {
         strengthBar.style.width = percentageWidht + "%"
         strengthBar.style.backgroundColor = "orange"
         strengthText.innerHTML = "Medium"
