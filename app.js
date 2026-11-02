@@ -51,7 +51,7 @@ generateBtn.addEventListener("click", () => {
 })
 copyBtn.addEventListener("click", async () => {
     try {
-        if (passwordInput.value === "" || passwordInput.value==="Select an option!") {
+        if (passwordInput.value === "" || passwordInput.value === "Select an option!") {
             alert("Please Generate Your Password First!")
             return;
         }
@@ -83,22 +83,22 @@ const strengthMeter = (password) => {
     if (symbols.checked) {
         points += 2;
     }
-    let percentageWidht = (points/10)*100;
-    if(points <5){
-        strengthBar.style.width=percentageWidht+"%"
-        strengthBar.style.backgroundColor="red"
-        strengthText.innerHTML="Weak"
+    let percentageWidht = (points / 10) * 100;
+    if (points < 5) {
+        strengthBar.style.width = percentageWidht + "%"
+        strengthBar.style.backgroundColor = "red"
+        strengthText.innerHTML = "Weak"
     }
-    if (points >= 5 && points <=7 ){
-        strengthBar.style.width=percentageWidht+"%"
-        strengthBar.style.backgroundColor="orange"
-        strengthText.innerHTML="Medium"
+    if (points >= 5 && points <= 7) {
+        strengthBar.style.width = percentageWidht + "%"
+        strengthBar.style.backgroundColor = "orange"
+        strengthText.innerHTML = "Medium"
     }
-    if(points >7){
-        strengthBar.style.width=percentageWidht+"%"
-        strengthBar.style.backgroundColor="green"
-        strengthText.innerHTML="Strong"
+    if (points > 7) {
+        strengthBar.style.width = percentageWidht + "%"
+        strengthBar.style.backgroundColor = "green"
+        strengthText.innerHTML = "Strong"
     }
-   
-    
+
+
 }
