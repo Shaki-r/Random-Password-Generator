@@ -22,6 +22,7 @@ lengthInput.addEventListener("input", function () {
     lengthValue.innerText = lengthInput.value;
 });
 generateBtn.addEventListener("click", () => {
+    copyBtn.innerHTML = "📋"
     let password = "";
     let characters = "";
     if (uppercase.checked) {
