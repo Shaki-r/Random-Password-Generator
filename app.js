@@ -67,10 +67,10 @@ copyBtn.addEventListener("click", async () => {
 const strengthMeter = (password) => {
     let points = 0;
     if (password.length >= 10) {
-        points += 4;
+        points += 6;
     }
     if (uppercase.checked) {
-        points += 2;
+        points += 1;
     }
 
     if (lowercase.checked) {
@@ -82,7 +82,7 @@ const strengthMeter = (password) => {
     }
 
     if (symbols.checked) {
-        points += 2;
+        points += 1;
     }
     let percentageWidht = (points / 10) * 100;
     if (points <= 5) {
